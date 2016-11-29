@@ -6,9 +6,10 @@
 .banner {
   color: white;
   text-align: center;
-  height: 50vh;
+  height: 70vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
+  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), image-url("mountain_background.jpg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,3 +25,14 @@
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
+.banner-container{
+background: rgba(255,255,255,.75);
+}
+.banner-row{
+  height: 45 px! important;
+  padding-left: 40 px;
+  font-size: 16px;
+  border: 1px solid;
+  margin: 3px;
+}
+
