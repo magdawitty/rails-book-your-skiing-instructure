@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'lessons/index'
-
-  get 'lessons/show'
-
+  devise_for :users
+  # get 'lessons/index'
+  #
+  # get 'lessons/:id', to: 'lessons#show'
+ resources :lessons, only: [:index, :show]
   get 'users/new'
 
   get 'users/create'
