@@ -11,12 +11,12 @@
 
             <div class="col-sm-5">
               <%= f.input :destination, label: false, include_blank: false, collection: @destinations, wrapper_html: {class: "field-input" } %>
-            <div><p class="text-left">Where?</p></div>
+            <div class="text-left"><p>Where?</p></div>
             </div>
 
             <div class="col-sm-5">
-              <%= f.input :destination, placeholder: "when?", label: false, wrapper_html: {class: "field-input" } %>
-              <div><p class="text-left">Where?</p></div>
+              <%= f.input :destination, label: false,  wrapper_html: {class: "field-input" }, input_html: {class: "datepicker"} %>
+              <div class="text-left"><p>When?</p></div>
             </div>
 
             <div class="col-sm-2 "> <!-- Button -->
@@ -34,4 +34,13 @@
   </div>
 </div>
 
-<!-- collection: %w[where? 1 2 3], -->
+<%= content_for(:js_head) do %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
+<% end %>
+
+
+<!-- placeholder: "when?", -->
