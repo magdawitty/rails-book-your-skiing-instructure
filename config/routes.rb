@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # get 'lessons/index'
   #
   # get 'lessons/:id', to: 'lessons#show'
- resources :lessons, only: [:index, :show]
+  resources :lessons, only: [:index, :show]
 
   root to: 'pages#home'
   resources :bookings, only: [:new, :create]
