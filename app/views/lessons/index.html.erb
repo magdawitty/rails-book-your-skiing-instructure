@@ -1,7 +1,7 @@
 <div class="wrapper-grey padded">
 <h1 class="text-center">Here are our top offers</h1>
 <div class="container" class="text-center">
-  <h2>Here your selection</h2>
+  <h2>Your selection</h2>
   <li class>Date pulled from the first page</li>
   <li>Location</li>
 
@@ -13,14 +13,14 @@
         <div class="card-description">
           <h2>Book a class with <%= lesson.user.name %></h2>
 
-          <p>$<%= lesson.price %> | <%= lesson.destination %></p> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i><% end %>
+          <p>$<%= lesson.price %> | <%= lesson.destination %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
         </div>
         <!-- <div class="card-ribbon">
           <span class="ribbon-text true">
             <%= lesson.destination %>
           </span>
         </div> -->
-        <img class="card-user avatar" src="http://placehold.it/30x30">
+        <img class="card-user avatar" src="<%= image_path("instructors/#{lesson.user.avatar}") %>">
         <a href="" class="card-link"></a>
       </div>
     </div>
