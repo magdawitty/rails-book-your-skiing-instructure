@@ -6,5 +6,7 @@ class PagesController < ApplicationController
     @lessons.each do |lesson|
       @destinations << lesson.destination
     end
+    @destinations.uniq!
+    @booking = Booking.new
   end
 end

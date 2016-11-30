@@ -4,6 +4,7 @@ before_action :set_lesson, only: [:show]
 
   def index
     @lessons = Lesson.all
+    # params[:]
   end
 
   def show
