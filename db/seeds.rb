@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Lesson.destroy_all
+User.destroy_all
+
 user = [
   {
   name: "Leo Senti",
@@ -69,45 +72,64 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   password: "78r43f878f3r"
   }
 ]
-# user.each { |params| User.create!(params) }
+user.each { |params| User.create!(params) }
 
 
 lesson = [
   {
+    user: User.all.sample,
     experience_level: "beginner",
-    destination: "Arlberg"
+    destination: "Arlberg",
+    price: 200
     },
+
      {
+    user: User.all.sample,
     experience_level: "intermediate",
-    destination:"Arlberg"
+    destination:"Arlberg",
+    price: 300
     },
      {
+    user: User.all.sample,
     experience_level: "advanced",
-    destination:"Arlberg"
+    destination:"Arlberg",
+    price: 400
     },
      {
+    user: User.all.sample,
     experience_level: "beginner",
-    destination:"Val Thorens"
+    destination:"Val Thorens",
+    price: 200
     },
      {
+    user: User.all.sample,
     experience_level:"intermediate",
-    destination:"Val Thorens"
+    destination:"Val Thorens",
+    price: 300
     },
      {
+    user: User.all.sample,
     experience_level:"advanced",
-    destination:"Val Thorens"
+    destination:"Val Thorens",
+    price: 400
     },
      {
+    user: User.all.sample,
     experience_level:"beginner",
-    destination: "Davos"
+    destination: "Davos",
+    price: 200
     },
      {
+    user: User.all.sample,
     experience_level: "intermediate",
-    destination:"Davos"
+    destination:"Davos",
+    price: 300
     },
      {
+    user: User.all.sample,
     experience_level:"advanced",
-    destination:"Davos"
+    destination:"Davos",
+    price: 400
     },
 ]
 lesson.each { |params| Lesson.create!(params) }
