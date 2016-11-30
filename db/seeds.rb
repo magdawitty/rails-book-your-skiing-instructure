@@ -76,38 +76,48 @@ lesson = [
   {
     experience_level: "beginner",
     destination: "Arlberg"
+    picture: "arlberg-beginner.jpg"
     },
      {
     experience_level: "intermediate",
     destination:"Arlberg"
+    picture: "arlberg-intermediate.jpg"
     },
      {
     experience_level: "advanced",
     destination:"Arlberg"
+    picture: "arlberg-advanced.jpg"
     },
      {
     experience_level: "beginner",
     destination:"Val Thorens"
+    picture: "valthrones-beginner.jpg"
     },
      {
     experience_level:"intermediate",
     destination:"Val Thorens"
+    picture: "valthrones-intermediate.jpg"
     },
      {
     experience_level:"advanced",
     destination:"Val Thorens"
+    picture: "valthrones-advanced.jpg"
+    },
     },
      {
     experience_level:"beginner",
     destination: "Davos"
+    picture: "davos-beginner.jpg"
     },
      {
     experience_level: "intermediate",
     destination:"Davos"
+    picture: "davos-intermediate.jpg"
     },
      {
     experience_level:"advanced",
     destination:"Davos"
+    picture: "davos-advanced.jpg"
     },
 ]
 lesson.each { |params| Lesson.create!(params) }
