@@ -24,7 +24,7 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   description: "I am a member of the St. Moritz Private Instructor Association. We are a unique Snow Sports Association in St.Moritz. All our Private Ski Instructors have the federal certificate and have many years of experience as private instructors in our valley and are well connected locally. We are passionate about guiding our guests with efficiency and high quality to ensure fun and an exciting time in our fantastic environment. We deliver an exclusive personal service and focus on your individual needs. I look very much forward to welcoming you in the Engadine valley.",
   email: "adrian.gilly@hotmail.it",
   password: "67832498",
-  avatar: "adrian-gilyy.jpg",
+  avatar: "adrian-gilly.jpg",
   stars: 3
   },
 {
@@ -86,7 +86,7 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
 {
   name: "Bella Seel",
   description: "Private lessons and performance clinics for all levels, developing your skill set for both on and off piste. Learn how to use their skis efficiently, how to adapt to different terrain and learning how to ski the whole mountain – bumps, steeps, ice, powder or slush, finishing with individual video analysis before you get off the slopes. Great to either get your ski legs back or for beginners to learn the basics before they get out to the Alps. Whether you are a beginner or an expert skier, I can help you develop your skill set from your home in London!",
-  email: "bellaseel@gmail.com",
+  email: "bella-seel@gmail.com",
   password: "78r43f878f3r",
   avatar: "bella-seel.jpg",
   stars: 4
