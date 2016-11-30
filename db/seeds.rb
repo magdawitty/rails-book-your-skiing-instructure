@@ -69,7 +69,7 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   encrypted_password: "78r43f878f3r"
   }
 ]
-user.each { |params| User.create!(params) }
+# user.each { |params| User.create!(params) }
 
 
 lesson = [
