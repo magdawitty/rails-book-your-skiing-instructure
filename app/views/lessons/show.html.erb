@@ -1,20 +1,20 @@
-
-
 <%= content_for :title, @lesson.destination %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1><%= @lesson.experience_level %> lesson at <%= @lesson.destination %></h1>
+<div class="show-full">
+  <div class="banner-image">
+   <%= image_tag("card-background/#{@lesson.picture}") %>
+ </div>
+ <div class="title-instructor">
+  <%= @lesson.destination %>
+</div>
+ <div class="instructor-image">
+  <%= image_tag("instructors/#{@lesson.user.avatar}", class: "avatar-instructor")%>
+</div>
 
-        <%= image_tag("card-background/#{@lesson.picture}", height: '300', width: '600')
-          %>
-          <h3>Your instructor <%= @lesson.user.name %> is looking forward to a day of skiing with you</h3>
+<div class="instructor-content">
+  <h3>Your instructor <%= @lesson.user.name %> is looking forward to a day of skiing with you</h3>
+  <p > <%= @lesson.user.description %></p>
+    <%= link_to "Book",  new_user_registration_path, class: "btn-medium" %>
 
-        <%= image_tag("instructors/#{@lesson.user.avatar}", height: '200', width: '200')
-          %>
-
-          <p > <%= @lesson.user.description %></p>
-    </div>
-  </div>
+</div>
 </div>
