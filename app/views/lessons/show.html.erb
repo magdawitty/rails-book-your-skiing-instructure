@@ -1,5 +1,15 @@
-<h1>Lessons#show</h1>
-<p>Find me in app/views/lessons/show.html.erb</p>
 
 
-<p>dropdown with available dates + create a form to the path new_booking_path </p>
+<%= content_for :title, @lesson.destination %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @lesson.experience_level %> lesson at <%= @lesson.destination %></h1>
+
+        <%= image_tag "card-background/#{@lesson.picture}"
+          %>
+          <h1><%= @lesson.experience_level %> lesson at <%= @lesson.destination %></h1>
+    </div>
+  </div>
+</div>
