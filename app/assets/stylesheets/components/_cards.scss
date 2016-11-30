@@ -1,10 +1,14 @@
 .lessons-card{
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   border-radius: 1%;
   background-size: cover !important;
   color: #000080;
-  height: 175px;
+  height: 200px;
   position: relative;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 10px darkgray;
+  }
 }
 
 .card-title {
