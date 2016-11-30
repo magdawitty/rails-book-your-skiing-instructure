@@ -1,25 +1,29 @@
 <div class="banner">
 
-
   <div class="banner-content">
 
     <h1>Book your skiing lesson online</h1>
     <div class="container" >
       <div class="row ">
 
-          <%= simple_form_for @lesson do |f| %>
+          <%= simple_form_for @lesson, method: :get do |f| %>
           <div class="search-form">
+
             <div class="col-sm-5">
-            <%= f.input :destination, placeholder: "where?",  label: false,  wrapper_html: {class: "field-input" }%>
-      <%#= f.input :date %>
+              <%= f.input :destination, label: false, include_blank: false, collection: @destinations, wrapper_html: {class: "field-input" } %>
+            <div><p class="text-left">Where?</p></div>
             </div>
+
             <div class="col-sm-5">
-            <%= f.input :experience_level, placeholder: "when?", label: false, wrapper_html: {class: "field-input" }  %>
+              <%= f.input :destination, placeholder: "when?", label: false, wrapper_html: {class: "field-input" } %>
+              <div><p class="text-left">Where?</p></div>
             </div>
-            <div class="col-sm-2 ">
-            <%= f.submit :search, :class=>"btn-banner" , label: false %>
+
+            <div class="col-sm-2 "> <!-- Button -->
+              <%= f.submit :search, :class=>"btn-banner" , label: false %>
             </div>
-            </div>
+
+          </div>
           <%end%>
 
         </div>
@@ -27,7 +31,7 @@
 
     </div>
 
-
   </div>
 </div>
 
+<!-- collection: %w[where? 1 2 3], -->
