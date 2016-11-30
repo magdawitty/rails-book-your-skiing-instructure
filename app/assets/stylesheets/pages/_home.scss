@@ -25,14 +25,30 @@
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
-.banner-container{
-background: rgba(255,255,255,.75);
+.search-form{
+// background: rgba(255,255,255,.75);
+display: flex;
+margin-top: 60 px;
 }
-.banner-row{
+.field-input{
   height: 45 px! important;
   padding-left: 40 px;
   font-size: 16px;
-  border: 1px solid;
-  margin: 3px;
+  border: 0.5px solid;
+  margin: 10px;
 }
-
+.btn-banner {
+  color: #FFFFFF;
+  background-color: #3179B1;
+  font-weight: bold;
+  padding: 8px 15px;
+  opacity: 0.9;
+  height: 45 px! important;
+  margin-top: 10px;
+}
+.btn-banner:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999;
+  height: 45 px! important;
+}

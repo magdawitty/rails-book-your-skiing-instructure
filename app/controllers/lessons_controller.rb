@@ -7,6 +7,7 @@ before_action :set_lesson, only: [:show]
   end
 
   def show
+
   end
 
 

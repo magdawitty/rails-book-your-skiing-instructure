@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'pgreset', '~> 0.1.1'
+gem "simple_form"
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
