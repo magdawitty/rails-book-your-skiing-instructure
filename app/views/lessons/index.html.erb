@@ -8,11 +8,12 @@
   <div class="row">
     <% @lessons.each do |lesson| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path('lindsey-vonn.jpg') %>')">
-        <div class="card-title"><%= lesson.destination %></div>
+      <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path("card-background/#{lesson.picture}") %>')">
+        <div class="card-title"><%= lesson.experience_level.capitalize %></div>
         <div class="card-description">
           <h2>Book a class with <%= lesson.user.name %></h2>
-          <p>$<%= lesson.price %> | <%= lesson.experience_level %></p>
+
+          <p>$<%= lesson.price %> | <%= lesson.destination %></p> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i><% end %>
         </div>
         <!-- <div class="card-ribbon">
           <span class="ribbon-text true">
