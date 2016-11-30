@@ -121,17 +121,16 @@ lesson = [
      {
     user: User.all.sample,
     experience_level: "beginner",
-    picture: "valthrones-beginner.jpg"
+    picture: "valthrones-beginner.jpg",
     destination:"Val Thorens",
     price: 200
     },
      {
     user: User.all.sample,
     experience_level:"intermediate",
-    picture: "valthrones-intermediate.jpg"
+    picture: "valthrones-intermediate.jpg",
     destination:"Val Thorens",
     price: 300
-
     },
      {
     user: User.all.sample,

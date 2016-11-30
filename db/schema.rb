@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20161130114146) do
 
-ActiveRecord::Schema.define(version: 20161130113513) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 20161130113513) do
     t.string   "experience_level"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "picture"
     t.integer  "user_id"
     t.integer  "price"
+    t.string   "picture"
     t.index ["user_id"], name: "index_lessons_on_user_id", using: :btree
   end
 
