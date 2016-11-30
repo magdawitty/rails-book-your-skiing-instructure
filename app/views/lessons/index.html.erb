@@ -1,19 +1,19 @@
 <div class="wrapper-grey padded">
-<h1 class="text-center">Here are our top offers</h1>
+<h1 class="text-center">Your selections for Aalberg on November 30th</h1>
 <div class="container" class="text-center">
-  <h2>Your selection</h2>
+  <!-- <h2>Your selection</h2>
   <li class>Date pulled from the first page</li>
-  <li>Location</li>
+  <li>Location</li> -->
 
   <div class="row">
     <% @lessons.each do |lesson| %>
-    <div class="col-xs-12 col-sm-4">
+    <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path("card-background/#{lesson.picture}") %>')">
         <div class="card-title"><%= lesson.experience_level.capitalize %></div>
         <div class="card-description">
           <h2>Book a class with <%= lesson.user.name %></h2>
 
-          <p>$<%= lesson.price %> | <%= lesson.destination %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
+          <p>$<%= lesson.price %> | <%= lesson.destination="Aalberg" %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
         </div>
         <!-- <div class="card-ribbon">
           <span class="ribbon-text true">
