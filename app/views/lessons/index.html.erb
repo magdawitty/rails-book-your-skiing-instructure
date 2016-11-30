@@ -14,6 +14,7 @@
           <h2>Book a class with <%= lesson.user.name %></h2>
 
           <p>$<%= lesson.price %> | <%= lesson.destination %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
+          <%= link_to "See Lesson", lesson_path(lesson) %>
         </div>
         <!-- <div class="card-ribbon">
           <span class="ribbon-text true">
