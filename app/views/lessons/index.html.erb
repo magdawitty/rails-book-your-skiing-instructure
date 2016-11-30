@@ -12,7 +12,6 @@
         <div class="card-title"><%= lesson.experience_level.capitalize %></div>
         <div class="card-description">
           <h2>Book a class with <%= lesson.user.name %></h2>
-
           <p>$<%= lesson.price %> | <%= lesson.destination="Arlberg" %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
         </div>
         <img class="card-user avatar" src="<%= image_path("instructors/#{lesson.user.avatar}") %>">
