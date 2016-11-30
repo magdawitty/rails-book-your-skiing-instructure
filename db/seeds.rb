@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Lesson.destroy_all
+User.destroy_all
+
 user = [
   {
   name: "Leo Senti",
@@ -89,55 +92,74 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   stars: 4
   }
 ]
-# user.each { |params| User.create!(params) }
+user.each { |params| User.create!(params) }
 
 
 lesson = [
   {
+    user: User.all.sample,
     experience_level: "beginner",
-    destination: "Arlberg"
-    picture: "arlberg-beginner.jpg"
+    picture: "arlberg-beginner.jpg",
+    destination: "Arlberg",
+    price: 200
     },
+
      {
+    user: User.all.sample,
     experience_level: "intermediate",
-    destination:"Arlberg"
-    picture: "arlberg-intermediate.jpg"
+     picture: "arlberg-intermediate.jpg",
+    destination:"Arlberg",
+    price: 300
     },
      {
+    user: User.all.sample,
     experience_level: "advanced",
-    destination:"Arlberg"
-    picture: "arlberg-advanced.jpg"
+    picture: "arlberg-advanced.jpg",
+    destination:"Arlberg",
+    price: 400
     },
      {
+    user: User.all.sample,
     experience_level: "beginner",
-    destination:"Val Thorens"
     picture: "valthrones-beginner.jpg"
+    destination:"Val Thorens",
+    price: 200
     },
      {
+    user: User.all.sample,
     experience_level:"intermediate",
-    destination:"Val Thorens"
     picture: "valthrones-intermediate.jpg"
+    destination:"Val Thorens",
+    price: 300
+
     },
      {
+    user: User.all.sample,
     experience_level:"advanced",
-    destination:"Val Thorens"
-    picture: "valthrones-advanced.jpg"
-    },
+    picture: "valthrones-advanced.jpg",
+    destination:"Val Thorens",
+    price: 400
     },
      {
+    user: User.all.sample,
     experience_level:"beginner",
-    destination: "Davos"
-    picture: "davos-beginner.jpg"
+    picture: "davos-beginner.jpg",
+    destination: "Davos",
+    price: 200
     },
      {
+    user: User.all.sample,
     experience_level: "intermediate",
-    destination:"Davos"
-    picture: "davos-intermediate.jpg"
+    picture: "davos-intermediate.jpg",
+    destination:"Davos",
+    price: 300
     },
      {
+    user: User.all.sample,
     experience_level:"advanced",
-    destination:"Davos"
-    picture: "davos-advanced.jpg"
+    picture: "davos-advanced.jpg",
+    destination:"Davos",
+    price: 400
     },
 ]
 lesson.each { |params| Lesson.create!(params) }
