@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Lesson.destroy_all
+User.destroy_all
+
 user = [
   {
   name: "Leo Senti",
@@ -55,38 +58,48 @@ user.each { |params| User.create!(params) }
 
 lesson = [
   {
+    user: User.all.sample,
     experience_level: "beginner",
     destination: "Arlberg"
     },
+
      {
+    user: User.all.sample,
     experience_level: "intermediate",
     destination:"Arlberg"
     },
      {
+    user: User.all.sample,
     experience_level: "advanced",
     destination:"Arlberg"
     },
      {
+    user: User.all.sample,
     experience_level: "beginner",
     destination:"Val Thorens"
     },
      {
+    user: User.all.sample,
     experience_level:"intermediate",
     destination:"Val Thorens"
     },
      {
+    user: User.all.sample,
     experience_level:"advanced",
     destination:"Val Thorens"
     },
      {
+    user: User.all.sample,
     experience_level:"beginner",
     destination: "Davos"
     },
      {
+    user: User.all.sample,
     experience_level: "intermediate",
     destination:"Davos"
     },
      {
+    user: User.all.sample,
     experience_level:"advanced",
     destination:"Davos"
     },

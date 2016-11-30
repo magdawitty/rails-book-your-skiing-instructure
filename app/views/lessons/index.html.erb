@@ -1,12 +1,56 @@
 <div class="wrapper-grey padded">
 <h1 class="text-center">Here are our top offers</h1>
-<div class="container">
+<div class="container" class="text-center">
+  <h2>Here your selection</h2>
+  <li class>Date pulled from the first page</li>
+  <li>Location</li>
 
   <div class="row">
-    <div class="col-sm-2 col-md-2">
+    <% @lessons.each do |lesson| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path('lindsey-vonn.jpg') %>')">
+        <div class="card-title"><%= lesson.experience_level %></div>
+        <div class="card-description">
+          <h2>Book a class with <%= lesson.user.name %></h2>
+          <p><%= lesson.experience_level %></p>
+        </div>
+        <div class="card-ribbon">
+          <span class="ribbon-text true">
+            <%= lesson.destination %>
+          </span>
+        </div>
+        <img class="card-user avatar" src="http://placehold.it/30x30">
+        <a href="" class="card-link"></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path('lindsey-vonn.jpg') %>')">
+        <div class="card-title"><%= lesson.destination %></div>
+        <div class="card-description">
+          <h2><%= lesson.experience_level %></h2>
+          <p>$ 100</p>
+        </div>
+        <img class="card-user avatar" src="http://placehold.it/30x30">
+        <a href="" class="card-link"></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path('lindsey-vonn.jpg') %>')">
+        <div class="card-title"><%= lesson.destination %></div>
+        <div class="card-description">
+          <h2><%= lesson.experience_level %></h2>
+          <p>$ 100</p>
+        </div>
+        <img class="card-user avatar" src="http://placehold.it/30x30">
+        <a href="" class="card-link"></a>
+      </div>
+    </div>
+  <% end %>
+
+    <!-- <div class="col-sm-2 col-md-2">
       <div class="search_filters_container full-width">
         Here your selection
-        <li>Date</li>
+        <li>Date pulled from the first page</li>
         <li>Location</li>
       </div>
     </div>
@@ -31,7 +75,7 @@
     </div>
     <% @lessons.each do |lesson| %>
       <div class="col-sm-10 col-md-5">
-      <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('app/impages/lindsey-vonn.jpg');">
+      <div class="lessons-card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path('lindsey-vonn.jpg') %>');">
         <div class="card-title"><%= lesson.destination %></div>
           <div class="card-description">
             <h2><%= lesson.experience_level %></h2>
@@ -42,7 +86,7 @@
       </div>
       </div>
     <% end %>
-  </div>
+  </div> -->
 
   </div>
 </div>

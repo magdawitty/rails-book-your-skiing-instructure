@@ -18,6 +18,16 @@
       left: 31px;
 }
 
+.card-ribbon {
+    position: absolute;
+    right: -6px;
+    top: -5px;
+    overflow: hidden;
+    width: 145px;
+    height: 145px;
+    text-align: right;
+}
+
 .avatar {
   width: 50px;
       position: absolute;
