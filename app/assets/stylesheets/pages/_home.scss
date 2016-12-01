@@ -15,11 +15,9 @@
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-
 .banner-content{
   font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
-
 .banner {
   color: white;
   text-align: center;
@@ -42,15 +40,14 @@
   font-size: 20px;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 1px;
+  margin-bottom: 20px;
 }
 .search-form{
 // background: rgba(255,255,255,.75);
-display: flex;
+display: auto;
 margin-top: 60 px;
-align-items: baseline;
-width: 454px;
-
+display: flex;
+justify-content: center;
 }
 .field-input{
   height: 30 px! important;
@@ -59,27 +56,54 @@ width: 454px;
     margin: 10px;
   // border-radius: 6px
 }
-.btn-banner {
-  color: white;
-  background-color: #203e6d;
-  font-weight: bold;
-  padding: 8px 15px;
-  opacity: 0.9;
-  height: 45 px! important;
-  border-radius: 6px
-}
-.btn-banner:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: white;
-  height: 45 px! important;
-}
 
 .text-left p {
-  font-size: 16px;
+  font-size: 20px;
   color: black;
 }
 
-#date, #destination {
-  color: black;
-}
+
+// Dante - Guys I took all this out because we do not need it, at least not for the home page like it was created for, but in case we might need it, it's still here
+// #date, #destination {
+//   color: black;
+//   height: 35px;
+//   width: 260px;
+//   margin-left:  10px;
+//   margin-right: 0;
+// }
+
+// .btn-banner {
+//   color: white;
+//   background-color: #469ae0;
+//   font-weight: bold;
+//   padding: 8px 15px;
+//   opacity: 10;
+//   height: 45px! important;
+//   border-radius: 10px
+// }
+// .btn-banner:hover {
+//   opacity: 1;
+//   text-decoration: none;
+//   color: white;
+//   height: 45 px! important;
+// }
+
+// .btn-banner {
+//   border-radius: 7px;
+//   font-family: Arial;
+//   color: #ffffff;
+//   font-size: 15px;
+//   text-align: center;
+//   padding: 4px;
+//   background: #469ae0;
+// }
+
+// .btn-banner:hover {
+//   background: #288adb;
+//   background-image: -webkit-linear-gradient(top, #288adb, #148ee0);
+//   background-image: -moz-linear-gradient(top, #288adb, #148ee0);
+//   background-image: -ms-linear-gradient(top, #288adb, #148ee0);
+//   background-image: -o-linear-gradient(top, #288adb, #148ee0);
+//   background-image: linear-gradient(to bottom, #288adb, #148ee0);
+//   text-decoration: none;
+// }
