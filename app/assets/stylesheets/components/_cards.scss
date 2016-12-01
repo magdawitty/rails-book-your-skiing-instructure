@@ -49,5 +49,63 @@
 }
 
 .fa-star {
-  color:gold;
+  color: gold;
+}
+
+.user-card {
+  background-color: #f7f7f7;
+  padding: 30px 60px;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.user-card li {
+  list-style-type: none;
+  font-size: 14px
+}
+
+.user-card a {
+  color: #203e6d;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.user-card a:hover {
+  color: #376cbf;
+  text-decoration: none
+}
+
+.user-card h3 {
+  padding-bottom: 10px;
+  color: #203e6d;
+  text-align: center
+}
+
+.last-link {
+  padding-bottom: 10px
+}
+
+.short-form {
+ padding-bottom: 10px;
+ text-align: center;
+ width: 70%;
+ margin: 0 auto;
+}
+
+.btn-add {
+  background-color: #3179B1;
+  color: white;
+  padding: 10px 30px;
+  transition: 0.3s;
+  margin-top: 20px
+}
+
+.btn-add:hover {
+  background-color: #255f8c;
+  color: white;
+  padding: 10px 30px;
+  transition: 0.3s
 }

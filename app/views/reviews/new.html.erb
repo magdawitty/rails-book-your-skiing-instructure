@@ -1,0 +1,11 @@
+<h1>Add a review for <%= @user.name %></h1>
+
+<%= simple_form_for [@user, @review], :url => user_reviews_path do |f| %>
+  <div class="user-card">
+    <div class="short-form">
+    <%= f.input :content %>
+    <%= f.input :rating, collection: 1..5, :include_blank => false %>
+    <%= f.submit "Add", class: "btn btn-add", data: { confirm: 'Well done! You just created a new review' } %>
+    </div>
+  </div>
+<% end %>
