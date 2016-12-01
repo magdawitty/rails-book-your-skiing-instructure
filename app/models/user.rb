@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :lessons
+
   has_many :reviews, dependent: :destroy
 
   def average_rating
@@ -14,4 +15,5 @@ class User < ApplicationRecord
     end
   end
 
+  mount_uploader :avatar, PhotoUploader
 end

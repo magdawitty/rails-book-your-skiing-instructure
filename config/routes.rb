@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'reviews/create'
 
   devise_for :users
-  # get 'lessons/index'
   #
   # get 'lessons/:id', to: 'lessons#show'
   resources :lessons, only: [:index, :show]

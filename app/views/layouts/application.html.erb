@@ -12,10 +12,10 @@
   <body>
 
     <%= render 'shared/navbar' %>
-    <%= render 'layouts/shared/flashes' %>
+    <%= render 'shared/flashes' %>
     <%= yield %>
 
-    <div class="footer">
+    <!-- <div class="footer">
 
       <div class="container">
         <div class="row">
@@ -38,9 +38,10 @@
           </div>
         </div>
       </div> <!-- ROW -->
+<!--
 
-    </div> <!-- FOOTER -->
-
+    <%= render 'shared/modal_instructor' %>
+    <%= render 'shared/modal_regular' %>
 
     <%= javascript_include_tag 'application' %>
     <%= yield(:js_head) %>
