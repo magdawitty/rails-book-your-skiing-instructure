@@ -9,4 +9,7 @@ class PagesController < ApplicationController
     @destinations.uniq!
     @booking = Booking.new
   end
+
+  def profile
+  end
 end

@@ -39,15 +39,14 @@
       </div>
 
     <% else %>
-
       <!-- Login text link -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
+      <button type="button" class="navbar-wagon-item navbar-wagon-button btn" data-toggle="modal" data-target="#instructorModal" data-whatever="@mdo">Register with us as instructor</button>
+      <button type="button" class="navbar-wagon-item navbar-wagon-button btn" data-toggle="modal" data-target="#regularModal" data-whatever="@mdo">Sign-up</button>
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <button type="button" class="navbar-wagon-item navbar-wagon-button btn" data-toggle="modal" data-target="#instructorModal" data-whatever="@mdo">Register with us as instructor</button>
-    <button type="button" class="navbar-wagon-item navbar-wagon-button btn" data-toggle="modal" data-target="#regularModal" data-whatever="@mdo">Sign-up</button>
+
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
