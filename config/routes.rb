@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  # get 'lessons/index'
   #
   # get 'lessons/:id', to: 'lessons#show'
   resources :lessons, only: [:index, :show]
