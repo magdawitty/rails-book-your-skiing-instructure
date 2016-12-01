@@ -8,8 +8,8 @@
  <div class="search-form">
   <%= form_tag({:controller => "lessons", :action => "index"}, {:method => 'get', class: "form-inline"}) do %>
 
-    <%= select_tag :destination, options_for_select(@destinations), class: "form-control" %>
-    <%= date_field_tag :date, class: "form-control" %>
+    <%= select_tag :destination, options_for_select(@destinations), class: "form-control destination" %>
+    <%= text_field_tag :date, nil, class: "datepicker date_picker" %>
     <%= submit_tag("Search", :class => "btn btn-primary") %>
 
   <% end %>
@@ -31,3 +31,7 @@
 <!-- placeholder: "when?", -->
 
     <%= render 'customer_opinion' %>
+
+    <%= render 'slideshow' %>
+
+
