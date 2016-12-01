@@ -1,9 +1,6 @@
 <div class="wrapper-grey padded">
-<h1 class="text-center">Your selections for Aalberg on November 30th</h1>
+<h1 class="text-center">Your selections for <%= params[:destination] %> on <%= params[:date] %></h1>
 <div class="container" class="text-center">
-  <!-- <h2>Your selection</h2>
-  <li class>Date pulled from the first page</li>
-  <li>Location</li> -->
 
   <div class="row">
     <% @lessons.each do |lesson| %>
@@ -12,7 +9,7 @@
         <div class="card-title"><%= lesson.experience_level.capitalize %></div>
         <div class="card-description">
           <h2>Book a class with <%= lesson.user.name %></h2>
-          <p>$<%= lesson.price %> | <%= lesson.destination="Arlberg" %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
+          <p>$<%= lesson.price %> | <%= lesson.destination %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
         </div>
         <img class="card-user avatar" src="<%= image_path("instructors/#{lesson.user.avatar}") %>">
         <a href="" class="card-link"></a>
