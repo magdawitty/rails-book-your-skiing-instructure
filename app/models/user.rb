@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :lessons
-  validates :instructor, presence: true
+  mount_uploader :avatar, PhotoUploader
 end

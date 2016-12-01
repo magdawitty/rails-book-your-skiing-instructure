@@ -8,6 +8,7 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'redis'
 gem 'bootstrap-datepicker-rails'
+gem 'cloudinary', '1.1.0'
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -18,7 +19,9 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'pgreset', '~> 0.1.1'
-gem "simple_form"
+gem 'simple_form'
+gem 'carrierwave'
+
 group :development, :test do
   gem 'binding_of_caller'
   gem 'better_errors'
