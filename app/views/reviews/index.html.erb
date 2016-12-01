@@ -1,0 +1,16 @@
+<h1 class="text-center">Here are the reviews for this user:</h1>
+
+<ul>
+
+  <% @reviews.each do |review| %>
+  <div class="user-card">
+    <li><%= review.content %></li>
+    <li><strong>Rating: </strong> &nbsp;
+      <%= review.rating.to_i %>
+    </li>
+  </div>
+  <% end %>
+
+</ul>
+
+<!-- "@user.average_rating" to calculate the average -->
