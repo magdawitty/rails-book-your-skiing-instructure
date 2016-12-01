@@ -24,30 +24,37 @@
     </div>
 
     <div class="row">
-    <div class="col-xs-4">
+      <div class="col-xs-4">
         <div class="booking_form">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="/bookings" method="post">
             <h3>Your selected skiing class</h3>
+            <% if session[:destination].present? %>
             <fieldset>
-              <input placeholder="Destination" type="text" tabindex="1" required autofocus>
+              <input type="text" tabindex="1" required autofocus value="<%=session[:destination]  %>">
+            </fieldset>
+            <% else %>
+             <fieldset>
+              <input placeholder="Where?" type="text" tabindex="1" required autofocus >
+              <% end %>
+            <fieldset>
+              <input placeholder="<%=session[:date]  %>" type="date" tabindex="2" required>
+              <p>Your suggested date was <%= session[:date] %></p>
             </fieldset>
             <fieldset>
-              <input placeholder="Date" type="date" tabindex="2" required>
+
+              <input value="<%= @lesson.user.name %>" type="text" tabindex="3" required>
             </fieldset>
             <fieldset>
-              <input placeholder="Instructor" type="text" tabindex="3" required>
-            </fieldset>
-            <fieldset>
-              <input placeholder="Price" type="price" tabindex="4" required>
+              <input value="<%= @lesson.price %>"placeholder="Price" type="price" tabindex="4" required>
             </fieldset>
 
             <fieldset>
-              <button name="submit" type="submit" id="booking-submit" data-submit="...Sending"><%= link_to "Book Class!",  new_booking_path %></button>
+              <button name="submit" type="submit" id="booking-submit" data-submit="...Sending"><%= link_to "Book Class!",  booking_path(@booking) %></button>
             </fieldset>
           </form>
+          <%#= raise %>
         </div>
       </div>
     </div>
   </div>
-
 
