@@ -5,16 +5,49 @@
    <%= image_tag("card-background/#{@lesson.picture}") %>
  </div>
  <div class="title-instructor">
-  <%= @lesson.destination %>
+  <%= @lesson.experience_level %> lesson at <%= @lesson.destination %>
 </div>
- <div class="instructor-image">
-  <%= image_tag("instructors/#{@lesson.user.avatar}", class: "avatar-instructor")%>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="description">
 
-<div class="instructor-content">
-  <h3>Your instructor <%= @lesson.user.name %> is looking forward to a day of skiing with you</h3>
-  <p > <%= @lesson.user.description %></p>
-    <%= link_to "Book",  new_booking_path, class: "btn-medium" %>
+        <div class="instructor-image">
+          <%= image_tag("instructors/#{@lesson.user.avatar}", class: "avatar-instructor")%>
+        </div>
+        <div class="instructor-content">
+          <h3>Your instructor <%= @lesson.user.name %> is looking forward to a day of skiing with you</h3>
+          <p > <%= @lesson.user.description %></p>
+        </div>
+      </div>
+    </div>
 
-</div>
-</div>
+    <div class="row">
+    <div class="col-xs-4">
+        <div class="booking_form">
+          <form id="contact" action="" method="post">
+            <h3>Your selected skiing class</h3>
+            <fieldset>
+              <input placeholder="Destination" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Date" type="date" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Instructor" type="text" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Price" type="price" tabindex="4" required>
+            </fieldset>
+
+            <fieldset>
+              <button name="submit" type="submit" id="booking-submit" data-submit="...Sending"><%= link_to "Book Class!",  new_booking_path %></button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
