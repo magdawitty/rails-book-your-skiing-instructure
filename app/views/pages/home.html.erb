@@ -5,26 +5,30 @@
     <h1>Book your skiing lesson online</h1>
     <div class="container" >
       <div class="row ">
-
-          <%= simple_form_for @lesson, method: :get do |f| %>
+          <%= form_tag({:controller => "lessons", :action => "index"}, {:method => 'get'}) do %>
+          <%#= simple_form_for @lesson, method: :get do |f| %>
           <div class="search-form">
 
             <div class="col-sm-5">
-              <%= f.input :destination, label: false, include_blank: false, collection: @destinations, wrapper_html: {class: "field-input" } %>
+              <%=search_field_tag :destination  %>
+              <%#= f.input :destination, label: false, include_blank: false, collection: @destinations, wrapper_html: {class: "field-input" } %>
             <div class="text-left"><p>Where?</p></div>
             </div>
 
             <div class="col-sm-5">
-              <%= f.input :destination, label: false,  wrapper_html: {class: "field-input" }, input_html: {class: "datepicker"} %>
+             <%#= date_field :booking, :date %>
+              <%= search_field_tag :date %>
+              <%#= f.input :destination, label: false,  wrapper_html: {class: "field-input" }, input_html: {class: "datepicker"} %>
               <div class="text-left"><p>When?</p></div>
             </div>
 
             <div class="col-sm-2 "> <!-- Button -->
-              <%= f.submit :search, :class=>"btn-banner" , label: false %>
+              <%= submit_tag %>
+              <%#= f.submit :search, :class=>"btn-banner" , label: false %>
             </div>
 
           </div>
-          <%end%>
+          <% end %>
 
         </div>
       </div>
