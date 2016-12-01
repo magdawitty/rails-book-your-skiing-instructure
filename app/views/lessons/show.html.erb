@@ -4,18 +4,32 @@
   <div class="banner-image">
    <%= image_tag("card-background/#{@lesson.picture}") %>
  </div>
- <div class="title-instructor">
-  <%= @lesson.experience_level %> lesson at <%= @lesson.destination %>
+
+ <div class="container">
+   <div class="container-top">
+     <div class="row">
+      <div class="row-top">
+       <div class="col-xs-8">
+         <div class="title-instructor">
+          <%= @lesson.experience_level %> lesson at <%= @lesson.destination %>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="instructor-image">
+          <%= image_tag("instructors/#{@lesson.user.avatar}", class: "avatar-instructor")%>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
+
+
+
 <div class="container">
   <div class="row">
     <div class="col-xs-8">
       <div class="description">
-
-        <div class="instructor-image">
-          <%= image_tag("instructors/#{@lesson.user.avatar}", class: "avatar-instructor")%>
-        </div>
         <div class="instructor-content">
           <h3>Your instructor <%= @lesson.user.name %> is looking forward to a day of skiing with you</h3>
           <p > <%= @lesson.user.description %></p>
@@ -24,7 +38,7 @@
     </div>
 
     <div class="row">
-    <div class="col-xs-4">
+      <div class="col-xs-4">
         <div class="booking_form">
           <form id="contact" action="" method="post">
             <h3>Your selected skiing class</h3>
