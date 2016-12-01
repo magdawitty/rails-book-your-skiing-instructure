@@ -4,11 +4,10 @@
   <div class="user-card">
     <li><h3><%= user.name %></h3></li>
     <div class="main-img">
-    <img class="avatar-main" src="<%= image_path("instructors/#{user.avatar}") %>">
+    <img class="avatar-main" src="<%= image_path("#{user.avatar}") %>">
     </div>
     <li><p class="text-justify"><%= user.description %></p></li>
     <li><strong>Average Rating:</strong> &nbsp;
-
     <% user.average_rating.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i><% end %>
 
     </li>
@@ -17,3 +16,5 @@
   </div>
   <% end %>
 </ul>
+
+<!-- ("/instructors/#{user.avatar}") -->
