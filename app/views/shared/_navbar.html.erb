@@ -46,9 +46,8 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= render 'shared/modal' %>
-    <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
-    <%= link_to t(".sign_up", default: "Register with us as instructor"), new_user_registration_path(instructor: true), class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <button type="button" class="navbar-wagon-item navbar-wagon-button btn" data-toggle="modal" data-target="#instructorModal" data-whatever="@mdo">Register with us as instructor</button>
+    <button type="button" class="navbar-wagon-item navbar-wagon-button btn" data-toggle="modal" data-target="#regularModal" data-whatever="@mdo">Sign-up</button>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
