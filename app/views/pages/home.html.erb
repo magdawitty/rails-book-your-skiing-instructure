@@ -1,42 +1,45 @@
-<div class="banner">
 
+
+<div class="banner">
   <div class="banner-content">
 
-    <h1>Book your skiing lesson online</h1>
-    <div class="container" >
-      <div class="row ">
-          <%= form_tag({:controller => "lessons", :action => "index"}, {:method => 'get'}) do %>
-          <%#= simple_form_for @lesson, method: :get do |f| %>
-          <div class="search-form">
+   <h1>Book your skiing lesson online</h1>
+   <div class="container" >
+    <div class="row ">
+      <%= form_tag({:controller => "lessons", :action => "index"}, {:method => 'get'}) do %>
 
-            <div class="col-sm-5">
-              <%=search_field_tag :destination  %>
-              <%#= f.input :destination, label: false, include_blank: false, collection: @destinations, wrapper_html: {class: "field-input" } %>
-            <div class="text-left"><p>Where?</p></div>
-            </div>
+      <div class="search-form">
 
-            <div class="col-sm-5">
-             <%#= date_field :booking, :date %>
-              <%= search_field_tag :date %>
-              <%#= f.input :destination, label: false,  wrapper_html: {class: "field-input" }, input_html: {class: "datepicker"} %>
-              <div class="text-left"><p>When?</p></div>
-            </div>
+        <div class="col-sm-5">
+        <%=select_tag(:destination, options_for_select(@destinations)) %>
+         <div class="text-left">
+           <p>Where?</p>
+         </div>
+       </div>
 
-            <div class="col-sm-2 "> <!-- Button -->
-              <%= submit_tag %>
-              <%#= f.submit :search, :class=>"btn-banner" , label: false %>
-            </div>
+       <div class="col-sm-5">
 
-          </div>
-          <% end %>
+        <%= search_field_tag :date %>
 
-        </div>
-      </div>
+        <div class="text-left">
+         <p>When?</p>
+       </div>
+     </div>
+
+     <div class="col-sm-2 ">
+      <%= submit_tag("Search", :class => "btn-banner") %>
 
     </div>
 
   </div>
+  <% end %>
+
 </div>
+</div>
+</div>
+</div>
+
+
 
 <%= content_for(:js_head) do %>
 <script type="text/javascript">

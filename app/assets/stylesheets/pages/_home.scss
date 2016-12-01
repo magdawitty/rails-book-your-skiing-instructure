@@ -2,6 +2,23 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.banner-content{
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
 
 .banner {
   color: white;
@@ -25,19 +42,21 @@
   font-size: 20px;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px;
+  margin-bottom: 1px;
 }
 .search-form{
 // background: rgba(255,255,255,.75);
 display: flex;
 margin-top: 60 px;
+align-items: baseline;
+width: 454px;
+
 }
 .field-input{
-  height: 45 px! important;
+  height: 30 px! important;
   padding-left: 40 px;
   font-size: 16px;
-  border: 1px solid;
-  margin: 10px;
+    margin: 10px;
   // border-radius: 6px
 }
 .btn-banner {
@@ -47,7 +66,6 @@ margin-top: 60 px;
   padding: 8px 15px;
   opacity: 0.9;
   height: 45 px! important;
-  margin-top: 10px;
   border-radius: 6px
 }
 .btn-banner:hover {
@@ -58,7 +76,10 @@ margin-top: 60 px;
 }
 
 .text-left p {
-  margin-left: 26px;
   font-size: 16px;
-  color: #f1f1f1;
+  color: black;
+}
+
+#date, #destination {
+  color: black;
 }
