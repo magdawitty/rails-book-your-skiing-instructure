@@ -195,5 +195,27 @@ lesson = [
     destination:"Kitzbühel",
     price: 400
     },
+    {
+    user: User.all.sample,
+    experience_level:"beginner",
+    picture: "valthrones-advanced.jpg",
+    destination:"Ischgl",
+    price: 200
+    },
+    {
+    user: User.all.sample,
+    experience_level:"intermediate",
+    picture: "arlberg-intermediate.jpg",
+    destination:"Ischgl",
+    price: 300
+    },
+    {
+    user: User.all.sample,
+    experience_level:"advanced",
+    picture: "davos-advanced.jpg",
+    destination:"Ischgl",
+    price: 400
+    },
+
 ]
 lesson.each { |params| Lesson.create!(params) }
