@@ -104,11 +104,29 @@
 }
 
 .link{
-    background-color: #3179B1;
-    color: white;
-    padding: 10px 30px;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    border-radius: 2px;
     margin-top: 20px;
     width: 30px;
   }
+
+.link a{
+  text-decoration: none;
+}
+.link a:hover{
+  text-decoration: none;
+}
+.link a:active{
+  text-decoration: none;
+}
