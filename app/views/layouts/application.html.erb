@@ -16,32 +16,10 @@
 
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+
     <%= yield %>
+    <%= render 'shared/footer' %>
 
-  <div class="footer">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="footer-left">
-          <p>Book Your Skiing Lesson Online &copy; &nbsp; 2016</p>
-          </div>
-        </div>
-
-        <div class="col-xs-6">
-
-            <div class="footer-right">
-            <a href='#'><i class="fa fa-facebook fa-2x fa-fw"></i></a>
-            <a href='#'><i class="fa fa-twitter fa-2x fa-fw"></i></a>
-            <a href='#'><i class="fa fa-youtube-play fa-2x fa-fw"></i></a>
-            <a href='#'><i class="fa fa-rss fa-2x fa-fw"></i></a>
-            <a href='#'><i class="fa fa-flickr fa-2x fa-fw"></i></a>
-            </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
   <%= render 'shared/modal_instructor' %>
   <%= render 'shared/modal_regular' %>
     <%= javascript_include_tag 'application' %>
