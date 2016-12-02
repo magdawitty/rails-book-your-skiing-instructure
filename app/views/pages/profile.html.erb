@@ -32,7 +32,11 @@
                         <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
                         </td>
                       </tr>
-
+                      <tr>
+                        <td><strong>Booking Info</strong></td>
+                        <td><strong>Date:</strong> <%= session[:date] %></td>
+                        <td><strong>Destination:</strong> <%= session[:destination] %></td>
+                      </tr>
                     </tbody>
                   </table>
                   <% unless @user.instructor = true %>
