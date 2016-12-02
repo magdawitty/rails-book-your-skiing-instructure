@@ -1,4 +1,4 @@
-<h1 class="text-center">Here are the reviews for this user:</h1>
+<h1 class="text-center">Review page for <%= @user.name %> </h1>
 
 <ul>
 
@@ -14,6 +14,10 @@
 </ul>
 
 <%= render 'reviews/new' %>
+<div class="link">
+<%=  link_to users_path %>
+</div>
+
 
 <!-- "@user.average_rating" to calculate the average -->
 
