@@ -1,6 +1,7 @@
-<div class="link">
-<%=  link_to 'back', users_path %>
-</div>
+
+
+<%= link_to t(".user", default: "Back"), users_path, class: "btn btn-primary" %>
+
 <h1 class="text-center">Review page for <%= @user.name %> </h1>
 
 <ul>
@@ -21,5 +22,3 @@
 
 
 <!-- "@user.average_rating" to calculate the average -->
-
-

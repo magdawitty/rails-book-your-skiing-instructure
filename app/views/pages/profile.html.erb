@@ -32,16 +32,24 @@
                         <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
                         </td>
                       </tr>
-                      <tr>
-                        <td><strong>Booking Info</strong></td>
-                        <td><strong>Date:</strong> <%= session[:date] %></td>
-                        <td><strong>Destination:</strong> <%= session[:destination] %></td>
-                      </tr>
+                      </tbody>
+                    </table>
+                    <table class ="table table-user-information">
+                    <tbody class='booking-list'>
+                        <tr>
+                          <td><strong>Booking Info</strong></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Date:</strong> <%= session[:date] %></td>
+                        </tr>
+                        <tr>
+                          <td><strong>Destination:</strong> <%= session[:destination] %></td>
+                        </tr>
                     </tbody>
                   </table>
                   <% unless @user.instructor %>
                     <%= link_to t(".user", default: "Rate your instructor"), users_path, class: "btn btn-primary" %>
-                    <a href="#" class="btn btn-primary" text-align="center">Show your current booking</a>
+                    <a href="#" class="btn btn-primary" id='booking-list-btn' text-align="center">Show your current booking</a>
                   <%end%>
                 </div>
               </div>
@@ -60,3 +68,14 @@
     </div>
   </div>
 </div>
+
+<%= content_for(:js_head) do %>
+  <script>
+    $(document).ready(function(){
+      $('.booking-list').hide();
+      $('#booking-list-btn').on('click', function(){
+        $('.booking-list').slideDown();
+      });
+    });
+  </script>
+<% end %>
