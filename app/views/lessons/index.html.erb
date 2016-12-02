@@ -11,7 +11,8 @@
           <h2>Book a class with <%= lesson.user.name %></h2>
           <p>$<%= lesson.price %> | <%= lesson.destination %> | <% lesson.user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i></p><% end %>
         </div>
-        <img class="card-user avatar" src="<%= image_path("instructors/#{lesson.user.avatar}") %>">
+        <!-- FIX ME: Dante; we need to add an exception for data if somebody does not search with it, nil on the datestrptime -->
+        <img class="card-user avatar" src="<%= cl_image_path("#{lesson.user.avatar}") %>">
         <a href="" class="card-link"></a>
       </div>
     </div>

@@ -27,10 +27,6 @@
 
        <img class="card-user avatar" src="<%= image_path("instructors/#{user.avatar}") %>">
 
-       <div class="link_review"><%= link_to "Show Reviews", user_reviews_path(user) %></div>
-
-       <div class="link_review"><%= link_to "Add New", new_user_review_path(user) %></div>
-
      </div>
    </div>
    <% end %>

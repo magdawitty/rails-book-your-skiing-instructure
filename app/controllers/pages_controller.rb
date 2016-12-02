@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def home
     @lesson = Lesson.new
     @lessons = Lesson.all
@@ -12,6 +13,5 @@ class PagesController < ApplicationController
 
   def profile
     @user = User.find(current_user)
-    
   end
 end
