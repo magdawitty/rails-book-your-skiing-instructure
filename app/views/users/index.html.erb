@@ -12,9 +12,17 @@
           <h3>Let us know how you liked your skiing lesson with <strong><%= user.name %> </strong></h3>
 
           <div class="rating">
-           <strong>Average Rating:</strong> &nbsp;
+           <strong>Average Rating</strong> &nbsp;
            <% user.average_rating.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i><% end %>
+           <% user.stars.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i>
+           <% end %>
          </div>
+
+         <div class="link_review1"><%= link_to "Add New", new_user_review_path(user) %>
+         </div>
+         <br>
+         <div class="link_review2">
+         <%= link_to "Show Reviews", user_reviews_path(user) %></div>
        </div>
 
        <img class="card-user avatar" src="<%= image_path("instructors/#{user.avatar}") %>">

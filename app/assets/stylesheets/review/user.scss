@@ -1,10 +1,10 @@
 .users-card{
   background-color: #f7f7f7;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 1%;
   background-size: cover !important;
   color: #000080;
-  height: 200px;
+  height: 245px;
   position: relative;
   cursor: pointer;
   &:hover {
@@ -17,7 +17,7 @@
 
 .card-description{
     position: absolute;
-    top: 90px;
+    top: 75px;
     left: 20px;
     color: white;
 }
@@ -29,6 +29,59 @@
   font-size: 15px;
   color: #494949;
 }
+
+.link_review1 a{
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+    bottom: -25px;
+    right: 22px;
+  cursor: pointer;
+  width:  88px;
+  background: #3179B1;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #999999;
+  padding: 10px;
+  opacity: 0.6;
+}
+.link_review1 a{
+  text-decoration: none;
+}
+.link_review1 a:hover{
+  text-decoration: none;
+}
+.link_review1 a:active{
+  text-decoration: none;
+}
+
+.link_review2 a{
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
+  bottom: -25px;
+    right: 118px;
+  // width: 20%;
+  background: #3179B1;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #999999;
+  padding: 10px 5px;
+  opacity: 0.6;
+  // right: 200px;
+
+}
+.link_review2 a{
+  text-decoration: none;
+}
+.link_review2 a:hover{
+  text-decoration: none;
+}
+.link_review2 a:active{
+  text-decoration: none;
+}
+
 
 .users-card .avatar {
   width: 50px;
