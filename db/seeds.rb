@@ -17,7 +17,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "leosenti@gmail.com",
   password: "@!gh@!",
   avatar: "leo-senti.jpg",
-  stars: 2
+  stars: 2,
+  instructor: true,
   },
 {
   name: "Adrian Gilly",
@@ -25,7 +26,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "adrian.gilly@hotmail.it",
   password: "67832498",
   avatar: "adrian-gilly.jpg",
-  stars: 3
+  stars: 3,
+  instructor: true
   },
 {
   name: "Roland Hemmi",
@@ -33,7 +35,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "roland.h@gmail.com",
   password: "rolandhemmi999",
   avatar: "roland-hemmi.jpg",
-  stars: 5
+  stars: 5,
+  instructor: true
   },
 {
   name: "Mirko Colombo",
@@ -41,7 +44,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "mirko.colombo@mail.it",
   password: "mc7777",
   avatar: "mirko-colombo.jpg",
-  stars: 4
+  stars: 4,
+  instructor: true
   },
 {
   name: "Annabel Seel",
@@ -49,7 +53,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "annabelseel1@gmail.com",
   password: "840978x0",
   avatar: "annabel-seel.jpg",
-  stars: 5
+  stars: 5,
+  instructor: true
   },
 {
   name: "Giulia Armario",
@@ -57,7 +62,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "giulietta99@hotmail.it",
   password: "ga2424ga",
   avatar: "giulia-armario.jpg",
-  stars: 4
+  stars: 4,
+  instructor: true
   },
 {
   name: "John Paul",
@@ -65,7 +71,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "john-paul@gmail.com",
   password: "xsxs!33",
   avatar: "john-paul.jpg",
-  stars: 3
+  stars: 3,
+  instructor: true
   },
 {
   name: "Caroline Adam",
@@ -73,7 +80,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "caroline.adam83@gmail.com",
   password: "84705hh",
   avatar: "caroline-adam.jpg",
-  stars: 2
+  stars: 2,
+  instructor: true
   },
 {
   name: "Liam Müller",
@@ -81,7 +89,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "liam888@gmail.com",
   password: "#bg#bg",
   avatar: "liam-müller.jpg",
-  stars: 5
+  stars: 5,
+  instructor: true
   },
 {
   name: "Bella Seel",
@@ -89,7 +98,8 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   email: "bella-seel@gmail.com",
   password: "78r43f878f3r",
   avatar: "bella-seel.jpg",
-  stars: 4
+  stars: 4,
+  instructor: true
   }
 ]
 user.each { |params| User.create!(params) }
