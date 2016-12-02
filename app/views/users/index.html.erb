@@ -21,8 +21,7 @@
          <div class="link_review2">
          <%= link_to "Show Reviews", user_reviews_path(user) %></div>
        </div>
-
-       <img class="card-user avatar" src="<%= image_path("instructors/#{user.avatar}") %>">
+        <img class="card-user avatar" src="<%= cl_image_path("#{user.avatar}") %>">
 
      </div>
    </div>
