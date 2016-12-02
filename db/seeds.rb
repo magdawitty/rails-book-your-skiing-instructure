@@ -18,9 +18,8 @@ user = [
 I'm also private pilot PPL and member of the pilot-association Engadin and as well by Flightsport - Association Tirol Innsbruck. So you can see the absolute fantastic mountains at a sightseeing- or taxi flights in a Piper Archer II or Cirrus SR22.",
   email: "leosenti@gmail.com",
   password: "@!gh@!",
-  avatar: "leo-senti.jpg",
   stars: 2,
-  instructor: true,
+  instructor: true
   },
 {
   name: "Adrian Gilly",
@@ -104,7 +103,10 @@ I'm also private pilot PPL and member of the pilot-association Engadin and as we
   instructor: true
   }
 ]
-user.each { |params| User.create!(params) }
+user.each do |params|
+  u = User.create!(params)
+  u.avatar.store! File.open(File.join(Rails.root,"app/assets/images/instructors/#{u.name.downcase.split(" ").join("-")}.jpg"))
+end
 
 
 lesson = [
@@ -170,6 +172,27 @@ lesson = [
     experience_level:"advanced",
     picture: "davos-advanced.jpg",
     destination:"Davos",
+    price: 400
+    },
+    {
+    user: User.all.sample,
+    experience_level:"beginner",
+    picture: "davos-beginner.jpg",
+    destination:"Kitzbühel",
+    price: 200
+    },
+    {
+    user: User.all.sample,
+    experience_level:"intermediate",
+    picture: "arlberg-advanced.jpg",
+    destination:"Kitzbühel",
+    price: 300
+    },
+    {
+    user: User.all.sample,
+    experience_level:"advanced",
+    picture: "valthrones-advanced.jpg",
+    destination:"Kitzbühel",
     price: 400
     },
 ]

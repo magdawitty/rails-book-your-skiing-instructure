@@ -22,7 +22,7 @@
             <%= f.input :description, as: "text", label: "Please say a few words about your experience as instructor", :input_html => {:style => 'height: 300px', id: "Test"}, required: true, autofocus: true %>
             <%= f.input :avatar, label: "Show your face to potential pupils" %>
             <%= f.input :avatar_cache, as: :hidden %>
-            <%= f.input :instructor, as: :hidden, input_html: { checked: true } %>
+            <%= f.input :instructor, value: true %>
             </div>
 
         </div>

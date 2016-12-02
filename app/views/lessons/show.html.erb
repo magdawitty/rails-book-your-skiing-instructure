@@ -11,12 +11,12 @@
       <div class="row-top">
        <div class="col-xs-8">
          <div class="title-instructor">
-          <%= @lesson.experience_level %> lesson at <%= @lesson.destination %>
+          <%= @lesson.experience_level.capitalize %> lesson in <%= @lesson.destination %>
         </div>
       </div>
       <div class="col-xs-4">
         <div class="instructor-image">
-          <%= image_tag("instructors/#{@lesson.user.avatar}", class: "avatar-instructor")%>
+          <img class="avatar-instructor" src="<%= cl_image_path("#{@lesson.user.avatar}") %>">
         </div>
       </div>
     </div>
