@@ -8,16 +8,19 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="exampleModalLabel">
-            Welcome to our platform
+            Congratulations on choosing Snowflake!
           </h4>
         </div>
         <div class="modal-body">
 
           <%= f.error_notification %>
-
           <div class="form-inputs">
             <%= f.input :email, required: true, autofocus: true %>
             <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+            <%= f.input :name, label: "Full Name", required: true, autofocus: true %>
+            <%= f.input :description, as: "text", label: "Please say a few words about what you want to learn", :input_html => {:style => 'height: 100px', id: "Test"}, required: true, autofocus: true %>
+            <%= f.input :avatar, label: "Show your face to potential pupils" %>
+            <%= f.input :avatar_cache, as: :hidden %>
           </div>
         </div>
         <div class="modal-footer">
