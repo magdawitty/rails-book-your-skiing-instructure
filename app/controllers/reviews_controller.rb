@@ -2,6 +2,9 @@ class ReviewsController < ApplicationController
   before_action :find_user
   def index
     @reviews = @user.reviews.all
+    @user = User.find(params[:user_id])
+    @review = Review.new
+
   end
 
   def new
