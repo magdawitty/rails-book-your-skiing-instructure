@@ -4,7 +4,6 @@ before_action :set_lesson, only: [:show]
 
   def index
     if params[:date].present? || params[:destination].present?
-      # params[:date] = Date.strptime(params[:date], '%d/%m/%Y')
       session[:date] = params[:date]
       session[:destination] = params[:destination]
       @lessons = Lesson.where(destination: params[:destination])
@@ -14,6 +13,7 @@ before_action :set_lesson, only: [:show]
   end
 
   def show
+    @date_calender = Date.strptime(session[:date],"%m/%d/%Y").strftime("%m/%d/%Y")
   end
 
 

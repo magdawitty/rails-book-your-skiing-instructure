@@ -23,9 +23,6 @@
   </div>
 </div>
 
-
-
-
 <div class="container">
   <div class="row">
     <div class="col-xs-8">
@@ -40,35 +37,48 @@
     <div class="row">
       <div class="col-xs-4">
         <div class="booking_form">
-          <form id="contact" action="/bookings" method="post">
+          <form id="contact" action="<%=@lesson.id%>/create" method="post">
             <h3>Your selected skiing class</h3>
+
             <% if session[:destination].present? %>
+
             <fieldset>
               <input type="text" tabindex="1" required autofocus value="<%=session[:destination]  %>">
             </fieldset>
-            <% else %>
-             <fieldset>
-              <input placeholder="Where?" type="text" tabindex="1" required autofocus >
+              <% else %>
+            <fieldset>
+             <input placeholder="Where?" type="text" tabindex="1" required autofocus >
               <% end %>
-            <fieldset>
-              <input placeholder="<%=session[:date]  %>" type="date" tabindex="2" required>
-              <p>Your suggested date was <%= session[:date] %></p>
             </fieldset>
-            <fieldset>
 
+            <fieldset>
+              <%= text_field_tag :date, nil, class: "datepicker",  value: @date_calender %>
+
+            </fieldset>
+
+            <fieldset>
               <input value="<%= @lesson.user.name %>" type="text" tabindex="3" required>
             </fieldset>
+
             <fieldset>
-              <input value="<%= @lesson.price %>"placeholder="Price" type="price" tabindex="4" required>
+              <input value="<%= @lesson.price %>" placeholder="Price" type="price" tabindex="4" required>
             </fieldset>
 
             <fieldset>
-              <button name="submit" type="submit" id="booking-submit" data-submit="...Sending"><%= link_to "Book Class!",  booking_path %></button>
+            <input type="submit" value="submit">
             </fieldset>
+<%#= link_to "Book Class!",  booking_path %>
           </form>
-          <%#= raise %>
         </div>
       </div>
     </div>
   </div>
 
+
+<%= content_for(:js_head) do %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
+<% end %>
