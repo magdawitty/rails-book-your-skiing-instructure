@@ -43,12 +43,12 @@
 
             <% if session[:destination].present? %>
 
-            <h6>Your Name</h6>
+            <h6>Destination</h6>
             <fieldset>
               <input type="text" tabindex="1" required autofocus value="<%=session[:destination]  %>">
             </fieldset>
               <% else %>
-            <h6>Your Name</h6>
+            <h6>Destination</h6>
             <fieldset>
              <input placeholder="Where?" type="text" tabindex="1" required autofocus >
               <% end %>
