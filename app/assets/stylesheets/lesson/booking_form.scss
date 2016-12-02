@@ -1,10 +1,14 @@
-
-
 .booking_form {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
   position: relative;
+}
+
+.booking_form h6 {
+  color: #777777;
+  margin-bottom: 4px;
+  // margin-left: 2px
 }
 
 #contact input[type="text"],
@@ -74,6 +78,22 @@ fieldset {
   resize: none;
 }
 
+.sky-blue {
+  // padding-left: 10px;
+  background-color: #3179B1;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px
+}
+
+.sky-blue:hover {
+  // padding-left: 10px;
+  background-color: #29628e;
+  color: white;
+}
+
 #contact button[type="submit"] {
   cursor: pointer;
   width: 100%;
@@ -107,18 +127,3 @@ fieldset {
   border: 1px solid #aaa;
 }
 
-// ::-webkit-input-placeholder {
-//   color: #888;
-// }
-
-// :-moz-placeholder {
-//   color: #888;
-// }
-
-// ::-moz-placeholder {
-//   color: #888;
-// }
-
-// :-ms-input-placeholder {
-//   color: #888;
-// }
