@@ -1,0 +1,51 @@
+.users-card{
+  background-color: #f7f7f7;
+  margin-bottom: 30px;
+  border-radius: 1%;
+  background-size: cover !important;
+  color: #000080;
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 10px darkgray;
+  }
+}
+.wrapper-grey {
+    background: white;
+}
+
+.card-description{
+    position: absolute;
+    top: 90px;
+    left: 20px;
+    color: white;
+}
+.card-description h3 {
+  font-size: 20px;
+  color: #494949;
+}
+.rating {
+  font-size: 15px;
+  color: #494949;
+}
+
+.users-card .avatar {
+  width: 50px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  height: 50px;
+}
+
+.avatar-bordered {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+.avatar-large {
+  width: 50px;
+}
+
+.fa-star {
+  color: gold;
+}

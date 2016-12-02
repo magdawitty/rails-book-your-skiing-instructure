@@ -1,20 +1,32 @@
-<h1 class="text-center">Our Instructors</h1>
-<ul>
-  <% @users.each do |user| %>
-  <div class="user-card">
-    <li><h3><%= user.name %></h3></li>
-    <div class="main-img">
-    <img class="avatar-main" src="<%= image_path("#{user.avatar}") %>">
-    </div>
-    <li><p class="text-justify"><%= user.description %></p></li>
-    <li><strong>Average Rating:</strong> &nbsp;
-    <% user.average_rating.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i><% end %>
+<div class="wrapper-grey padded">
+  <h1 class="text-center">Our Instructors</h1>
 
-    </li>
-    <li class="text-center last-link"><%= link_to "Show Reviews", user_reviews_path(user) %></li>
-    <li class="text-center last-link"><%= link_to "Add New", new_user_review_path(user) %></li>
-  </div>
-  <% end %>
-</ul>
+  <div class="container" class="text-center">
 
-<!-- ("/instructors/#{user.avatar}") -->
+    <div class="row">
+      <% @users.each do |user| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+       <div class="users-card">
+
+        <div class="card-description">
+          <h3>Let us know how you liked your skiing lesson with <strong><%= user.name %> </strong></h3>
+
+          <div class="rating">
+           <strong>Average Rating:</strong> &nbsp;
+           <% user.average_rating.to_i.times do |i| %> <i class="fa fa-star" aria-hidden="true"></i><% end %>
+         </div>
+       </div>
+
+       <img class="card-user avatar" src="<%= image_path("instructors/#{user.avatar}") %>">
+
+       <div class="link_review"><%= link_to "Show Reviews", user_reviews_path(user) %></div>
+
+       <div class="link_review"><%= link_to "Add New", new_user_review_path(user) %></div>
+
+     </div>
+   </div>
+   <% end %>
+
+ </div>
+</div>
+</div>
